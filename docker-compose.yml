@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  time-db-frontend:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - time-db-api
+
+  time-db-api:
+    build: .
+    ports:
+      - "5000:5000"
